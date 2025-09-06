@@ -1,13 +1,12 @@
 [theme]
-primaryColor = "#6C5CE7"
-backgroundColor = "#0B0D13"
-secondaryBackgroundColor = "#111521"
-textColor = "#E6E9EF"
+primaryColor = "#7C3AED"               # purple
+backgroundColor = "#070A12"
+secondaryBackgroundColor = "#0C1222"
+textColor = "#E9EDFA"
 font = "sans serif"
-
-[server]
-enableXsrfProtection = true
-headless = true
 
 [browser]
 gatherUsageStats = false
+
+[server]
+enableXsrfProtection = true

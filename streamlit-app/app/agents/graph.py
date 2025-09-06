@@ -32,9 +32,9 @@ def node_plan(state: AgentState) -> AgentState:
 def node_route(state: AgentState) -> AgentState:
     if state.get("blocked"):
         return state
-    # Try LLM router; fallback to heuristic
-    route = classify_route_llm(state["input"]) or "other"
+    route, debug = classify_route_llm(state["input"])
     state["intent"] = route
+    state.setdefault("artifacts", {})["router_debug"] = debug
     return state
 
 def node_screen(state: AgentState) -> AgentState:
